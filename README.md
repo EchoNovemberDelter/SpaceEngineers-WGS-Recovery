@@ -2,9 +2,9 @@
 An interactive Python utility to extract Microsoft Store Space Engineers cloud-synced saves, known as "WGS files" from Xbox or PC that were lost due to loading corrupted or invalid backups.
 If you've ever loaded a backup of a save that resulted in your save being seemingly deleted or de-listed from the "Load Game" menu, this is for you.
 (The backup was likely corrupted because your cloud storage was full when it tried to save.)
-This tool does not write anything to WGS throughout the process, and only creates the recovered world to the prompted location.
+This utility does not write anything to WGS throughout the process, and only creates the recovered world to the prompted location.
 
-You can also use this tool to perform local backups of cloud-synced saves.
+You can also use this utility to perform local backups of cloud-synced saves.
 In the future, I would like to add better backup functionality/QOL and blueprint detection.
 
 Obviously, this only works on Windows.
@@ -12,6 +12,7 @@ Obviously, this only works on Windows.
 ## What Does It Do?
 This utility attempts to scan your WGS (Microsoft cloud-sync) folders on your PC, assuming you have Space Engineers installed via Microsoft Store.
 If you do not have Space Engineers installed, you're safe to install it and let it sync.
+Basic save file verification is included that will attempt to determine if all important files are present.
 
 ## What Do I Do If I Just Lost My Save?
 If you lost the save on Xbox:
@@ -30,6 +31,6 @@ First, if you have not already installed [Python](https://www.python.org/downloa
 3. In Terminal, type "python sewgsrecoverertool.py"
 4. The utility should now be started, and you are prompted to add a custom package location for backups or leave it blank for the default Space Engineers cloud storage location.
    - If a custom location was entered that does not meet the expected package configuration, you will be prompted to blindly search until the utility can find a folder that does.
-6. The next steps are intuitive. The utility will list the worlds and allow you to inspect them for their thumbnail and/or provide a location to recover the world to (defaults to the SE save location).
-   - Save inspection menu:<img width="1158" height="717" alt="image" src="https://github.com/user-attachments/assets/7199980a-dda1-47b5-89dd-02d06d092aaa" />
-9. After the recovery is complete, you will be prompted as to what do do with a "manifest.json." This is a .json file that shows the correlation between the true file names and blob hex GUIDs. You can safely delete it if you do not want that information.
+6. The next steps are self-explanatory. The utility will list the worlds and allow you to inspect them for their thumbnail and/or provide a location to recover the world to (defaults to the SE save location).
+   - Save inspection menu:<img width="1158" height="717" alt="627565367-7199980a-dda1-47b5-89dd-02d06d092aaa" src="https://github.com/user-attachments/assets/d6466550-c615-446b-b92d-8b8e9fde1b29" />
+7. After the recovery is complete, you will be prompted as to what do do with a "manifest.json." This is a .json file that shows the correlation between the true file names and blob hex GUIDs. You can safely delete it if you do not want that information.
